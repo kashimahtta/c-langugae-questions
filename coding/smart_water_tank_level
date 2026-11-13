@@ -1,0 +1,19 @@
+/*
+TITLE: Smart Water Tank Levels
+DESCRIPTION: Generates water tank readings and sums the first K readings.
+STATEMENT:
+A tank starts with 100 litres. Its level increases by +5, +10, +15, +20, then repeats that increment pattern. Generate the first N readings and return their sequence along with the sum of the first K readings.
+*/void generateWaterLevels(int n, int k, int levels[], int *sum) {
+    int waterLevel = 100;
+    int increments[] = {5, 10, 15, 20};
+    *sum = 0;
+
+    for (int i = 0; i < n; i++) {
+        waterLevel += increments[i % 4];
+        levels[i] = waterLevel;
+
+        if (i < k) {
+            *sum += waterLevel;
+        }
+    }
+}

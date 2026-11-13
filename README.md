@@ -2,6 +2,10 @@
 
 A small, file-driven learning site for the existing C and C++ exercises. The original programs stay in `coding/`; the site discovers every `.c` and `.cpp` file there, so adding a source file does not require adding a page or editing an index.
 
+## live deployed link
+
+[dsaseries.vercel.app](https://dsaseries.vercel.app/)
+
 ## Run locally
 
 1. Install [Node.js](https://nodejs.org/) 20 or newer. npm is included with Node.js.
@@ -15,6 +19,12 @@ A small, file-driven learning site for the existing C and C++ exercises. The ori
 4. Open [http://127.0.0.1:3000](http://127.0.0.1:3000) in your browser. Keep the terminal open while using the site. Press **Ctrl+C** in the terminal to stop the server; run `npm start` again to restart it.
 
 The website runs locally on your computer; pushing to GitHub does not automatically make it a live website. Docker is optional for browsing but required to run programs, as described below.
+
+## Deploying to Vercel
+
+Import this repository into Vercel and keep the project root set to the repository root, where `vercel.json` and `package.json` are located. The Vercel configuration serves the HTML, CSS, and browser JavaScript as static files, routes API requests to the Node.js handler, and includes the `coding/` source files in the function bundle.
+
+Program execution is disabled on Vercel because serverless functions cannot start Docker containers. The site and problem listings remain available; use the local Docker-backed server to compile and run programs.
 
 The problem list refreshes automatically while the page is open, including new files and edits to existing source; an open problem refreshes when its source changes. On the detail page, the code viewer reads the original source file and is read-only. Optional metadata can be added in a leading comment:
 
