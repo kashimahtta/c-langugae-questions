@@ -4,9 +4,17 @@ A small, file-driven learning site for the existing C and C++ exercises. The ori
 
 ## Run locally
 
-1. Install Node.js 20 or newer.
-2. From the repository root, run `npm start`.
-3. Open [http://127.0.0.1:3000](http://127.0.0.1:3000).
+1. Install [Node.js](https://nodejs.org/) 20 or newer. npm is included with Node.js.
+2. Open this repository folder in VS Code and select **Terminal > New Terminal**. Make sure the terminal is in the repository root, where `package.json` is located.
+3. Start the website:
+
+   ```powershell
+   npm start
+   ```
+
+4. Open [http://127.0.0.1:3000](http://127.0.0.1:3000) in your browser. Keep the terminal open while using the site. Press **Ctrl+C** in the terminal to stop the server; run `npm start` again to restart it.
+
+The website runs locally on your computer; pushing to GitHub does not automatically make it a live website. Docker is optional for browsing but required to run programs, as described below.
 
 The problem list refreshes automatically while the page is open, including new files and edits to existing source; an open problem refreshes when its source changes. On the detail page, the code viewer reads the original source file and is read-only. Optional metadata can be added in a leading comment:
 
