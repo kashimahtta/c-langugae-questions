@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f7f2">
+    <meta name="description" content="A calm, personal collection of C and C++ coding practice.">
+    <title>Coding Garden — C &amp; C++ practice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Coding Garden home">
+        <span class="brand-mark" aria-hidden="true">c<span>.</span></span>
+        <span>Coding Garden</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/#problems">The collection</a>
+        <span class="nav-note"><span class="status-dot"></span><span id="problem-count">Finding problems…</span></span>
+      </nav>
+    </header>
+
+    <main>
+      <section class="intro" id="home">
+        <div class="intro-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span>A personal practice journal</p>
+          <h1>Small steps.<br><em>Stronger logic.</em></h1>
+          <p class="intro-description">A growing collection of C and C++ programs, built one question at a time. Pick a problem, explore the code, and make it your own.</p>
+          <a class="button button-primary" href="#problems">Start exploring <span aria-hidden="true">↗</span></a>
+          <div class="intro-footnote"><span class="leaf-mark" aria-hidden="true">✳</span> Every program lives in the original <code>coding/</code> folder.</div>
+        </div>
+        <div class="intro-art" aria-hidden="true">
+          <div class="art-orbit orbit-one"></div>
+          <div class="art-orbit orbit-two"></div>
+          <div class="art-branch">
+            <span class="branch-stem"></span>
+            <span class="leaf leaf-one"></span>
+            <span class="leaf leaf-two"></span>
+            <span class="leaf leaf-three"></span>
+            <span class="leaf leaf-four"></span>
+          </div>
+          <span class="art-caption">learn / build / repeat</span>
+          <span class="art-index">01 — ∞</span>
+        </div>
+      </section>
+
+      <section class="collection section-shell" id="problems">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-line"></span>The growing collection</p>
+            <h2>Choose a problem</h2>
+            <p class="section-description">Browse the programs in <code>coding/</code>. Save a new C or C++ file there and it will appear here automatically.</p>
+          </div>
+          <div class="collection-meta"><span id="collection-count">—</span><span>problems to explore</span></div>
+        </div>
+        <div class="collection-controls">
+          <div class="filter-group" role="group" aria-label="Filter by language">
+            <button class="filter-button is-selected" type="button" data-filter="all" aria-pressed="true">All</button>
+            <button class="filter-button" type="button" data-filter="c" aria-pressed="false">C</button>
+            <button class="filter-button" type="button" data-filter="cpp" aria-pressed="false">C++</button>
+          </div>
+          <label class="search-box">
+            <span class="sr-only">Search problems</span>
+            <span aria-hidden="true">⌕</span>
+            <input id="problem-search" type="search" placeholder="Find a problem…" autocomplete="off">
+          </label>
+        </div>
+        <p class="live-message" id="list-status" role="status" aria-live="polite">Loading programs from coding/…</p>
+        <div class="problem-grid" id="problem-grid" aria-live="polite"></div>
+        <div class="empty-state" id="empty-state" hidden>
+          <span class="empty-icon" aria-hidden="true">⌁</span>
+          <h3>No matching programs</h3>
+          <p>Try a different search or language filter.</p>
+        </div>
+      </section>
+
+      <section class="detail-section section-shell" id="problem-detail" hidden>
+        <a class="back-link" href="/#problems"><span aria-hidden="true">←</span> All problems</a>
+        <div id="detail-content"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="/"><span class="brand-mark" aria-hidden="true">c<span>.</span></span><span>Coding Garden</span></a>
+      <p>Made with curiosity, one program at a time.</p>
+      <a class="back-top" href="#home">Back to top ↑</a>
+    </footer>
+    <noscript><p class="noscript">This learning platform needs JavaScript to discover the programs in coding/.</p></noscript>
+  </body>
+</html>

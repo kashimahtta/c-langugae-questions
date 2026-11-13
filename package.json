@@ -1,0 +1,12 @@
+{
+  "name": "coding-garden",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A file-driven C and C++ coding practice platform.",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
